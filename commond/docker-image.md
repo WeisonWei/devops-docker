@@ -33,11 +33,5 @@
 ### docker run -t 
 伪终端
 
-### docker run -it cid /bin/bash
-启动容器交互方式为伪终端，shell为/bin/bash
-
-### docker exec -it cid /bin/bash
-以交互方式为伪终端 shell为/bin/bash 进入容器
-
-### docker attach cid
-进入容器
+### docker run -it 
+伪终端
