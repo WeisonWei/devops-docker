@@ -1,0 +1,25 @@
+# [参考](https://github.com/openzipkin/docker-zipkin/blob/master/docker-compose.yml)
+version: '3'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.7-management
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=123123
+      - RABBITMQ_DEFAULT_VHOST=demo
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    ports:
+      - 15672:15672
+      - 5671:5671
+      - 5672:5672
+    networks:
+      - net
+    restart: unless-stopped
+ 
+
+volumes:
+  rabbitmq_data:
+networks:
+  net:
