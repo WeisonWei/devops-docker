@@ -9,4 +9,4 @@ docker run -d \
 -v ${VOL}:/data \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -p 9001:9000 \
-portainer/portainer:1.23.2
+portainer/portainer:latest
